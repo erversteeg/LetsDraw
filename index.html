@@ -1,0 +1,65 @@
+<!DOCTYPE HTML> 
+<html> 
+  
+<head> 
+    <title> 
+      	Let's Draw 2021
+    </title>
+</head>
+
+<style>
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
+  
+<body class="vertical-center"> 
+
+    <div align="center">
+	<a href="https://play.google.com/store/apps/details?id=com.ericversteeg.liquidocean">
+            <img src="https://www.fcsok.org/wp-content/uploads/2020/04/get-it-on-google-play-badge.png" height="60px" />
+	</a>
+    </div>
+
+    <div align="center">
+	<a href="https://apps.apple.com/us/app/lets-draw-2021/id1560870349">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" height="60px" />
+	</a>
+    </div>
+
+    <script>
+        var el_up = document.getElementById("GFG_UP");
+        var el_down = document.getElementById("GFG_DOWN");
+          
+        function GFG_Fun() {
+            var res = "Device is not Android Phone";
+            var Android = /(android)/i.test(navigator.userAgent);
+            var IPhone = /(iphone)/i.test(navigator.userAgent);
+
+            if(Android) {
+                res = "Device is Android Phone";
+		window.location.href = "https://play.google.com/store/apps/details?id=com.ericversteeg.liquidocean"
+            }
+	    else if(IPhone) {
+	        window.location.href = "https://apps.apple.com/us/app/lets-draw-2021/id1560870349"
+	    }
+              
+            el_down.innerHTML = res;
+        }
+
+	GFG_Fun()
+    </script> 
+</body> 
+  
+</html>
